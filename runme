@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+find . -name "*.py" -exec chmod +x {} \;
+find . -name "*.sh" -exec chmod +x {} \;
+
+python3 main.py

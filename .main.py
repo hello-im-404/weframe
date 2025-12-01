@@ -44,9 +44,7 @@ def osint():
     try:
         choice = int(input("\n> "))
         if choice == 1:
-            script_path = "src/osint/start-case.sh"
-            subprocess.run(["chmod", "+x", script_path])
-            subprocess.run([script_path], shell=True)
+            subprocess.run(["src/osint/start-case.sh"])
         else:
             print("Invalid choice")
     except ValueError:
@@ -57,20 +55,23 @@ def other():
     print("1 - my-kali-dot")
     print("2 - nvim-dot") 
     print("3 - pentest-arch")
-    print("4 - Description about options")
+    print("4 - password-policy-analyz.py")
+    print("5 - phishing-email.py")
+    print("9 - Description about options")
     
     try:
         choice = int(input("\n> "))
         if choice == 1:
-            subprocess.run(["chmod", "+x", "src/other/my-kali-dot/install.sh"])
-            subprocess.run(["src/other/my-kali-dot/install.sh"], shell=True)
+            subprocess.run(["src/other/my-kali-dot/install.sh"])
         elif choice == 2:
-            subprocess.run(["chmod", "+x", "src/other/nvim-dot/install.sh"])
-            subprocess.run(["src/other/nvim-dot/install.sh"], shell=True)
+            subprocess.run(["src/other/nvim-dot/install.sh"])
         elif choice == 3:
-            subprocess.run(["chmod", "+x", "src/other/pentest-arch-dotfile/setup.sh"])
-            subprocess.run(["src/other/pentest-arch-dotfile/setup.sh"], shell=True)
+            subprocess.run(["src/other/pentest-arch-dotfile/setup.sh"])
         elif choice == 4:
+            subprocess.run(["src/other/password-policy-analyz.py"])
+        elif choice == 5:
+            subprocess.run(["src/other/phishing-email.py"])
+        elif choice == 9:
             print("\n--- Descriptions ---")
             print("my-kali-dot - installing packages for pentest on Debian/Kali distro.")
             print("nvim-dot - neovim personal dotfile.")
@@ -84,13 +85,16 @@ def cracking():
     print("\n=== Cracking Tools ===")
     print("1 - hash-crack.py")
     print("2 - pass-crack.py")
+    print("3 - ssh-bruteforce.py")
     
     try:
         choice = int(input("\n> "))
         if choice == 1:
-            subprocess.run([sys.executable, "src/cracking/hash-crack.py"])
+            subprocess.run(["src/cracking/hash-crack.py"])
         elif choice == 2:
-            subprocess.run([sys.executable, "src/cracking/pass-crack.py"])
+            subprocess.run(["src/cracking/pass-crack.py"])
+        elif choice == 3:
+            subprocess.run(["src/cracking/ssh-bruteforce.py"])
         else:
             print("Invalid choice")
     except ValueError:
@@ -99,11 +103,14 @@ def cracking():
 def net():
     print("\n=== Network Tools ===")
     print("1 - net-analyz.py")
+    print("2 - packet-sniffer.py")
     
     try:
         choice = int(input("\n> "))
         if choice == 1:
-            subprocess.run([sys.executable, "src/network/net-analyz.py"])
+            subprocess.run(["src/network/net-analyz.py"])
+        elif choice == 2:
+            subprocess.run(["src/network/packet-sniffer.py"])
         else:
             print("Invalid choice")
     except ValueError:
@@ -111,7 +118,7 @@ def net():
 
 def web():
     print("\n=== Web Tools ===")
-    print("1 - csrf-generator.py")
+    print("1 - port-scanner.py")
     print("2 - recon.sh")
     print("3 - smuggler.py")
     print("4 - vulnscanner")
@@ -119,14 +126,13 @@ def web():
     try:
         choice = int(input("\n> "))
         if choice == 1:
-            subprocess.run([sys.executable, "src/web/csrf-generator.py"])
+            subprocess.run(["src/web/port-scanner.py"])
         elif choice == 2:
-            subprocess.run(["chmod", "+x", "src/web/recon.sh"])
-            subprocess.run(["src/web/recon.sh"], shell=True)
+            subprocess.run(["src/web/recon.sh"])
         elif choice == 3:
-            subprocess.run([sys.executable, "src/web/smuggler.py"])
+            subprocess.run(["src/web/smuggler.py"])
         elif choice == 4:
-            subprocess.run([sys.executable, "src/web/vulnscanner/r31scanner.py"])
+            subprocess.run(["src/web/vulnscanner/r31scanner.py"])
         else:
             print("Invalid choice")
     except ValueError:
