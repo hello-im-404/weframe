@@ -3,4 +3,4 @@
 find . -name "*.py" -exec chmod +x {} \;
 find . -name "*.sh" -exec chmod +x {} \;
 
-python3 main.py
+python3 .main.py
