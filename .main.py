@@ -14,6 +14,7 @@ def menu():
         print("3 - Network Tools")
         print("4 - OSINT Tools")
         print("5 - Other Tools")
+        print("6 - Dot files")
         print("99 - Exit")
         
         try:
@@ -29,6 +30,8 @@ def menu():
                 osint()
             elif choice == 5:
                 other()
+            elif choice == 6:
+                dots()
             elif choice == 99:
                 print("Goodbye!")
                 break
@@ -50,32 +53,37 @@ def osint():
     except ValueError:
         print("Please enter a valid number")
 
-def other():
-    print("\n=== Other Tools ===")
+
+def dots():
+    print("\n=== Dot files===")
     print("1 - my-kali-dot")
     print("2 - nvim-dot") 
     print("3 - pentest-arch")
-    print("4 - password-policy-analyz.py")
-    print("5 - phishing-email.py")
-    print("9 - Description about options")
+
+    try:
+        choice = int(input("\n> "))
+        if choice == 1:
+            subprocess.run(["src/dots/my-kali-dot/install.sh"])
+        elif choice == 2:
+            subprocess.run(["src/dots/nvim-dot/install.sh"])
+        elif choice == 3:
+            subprocess.run(["src/dots/pentest-arch-dotfile/setup.sh"])
+        else:
+            print("Invalid choice")
+    except ValueError:
+        print("Please enter a valid number")
+
+def other():
+    print("\n=== Other Tools ===")
+    print("1 - password-policy-analyz.py")
+    print("2 - phishing-email.py")
     
     try:
         choice = int(input("\n> "))
         if choice == 1:
-            subprocess.run(["src/other/my-kali-dot/install.sh"])
-        elif choice == 2:
-            subprocess.run(["src/other/nvim-dot/install.sh"])
-        elif choice == 3:
-            subprocess.run(["src/other/pentest-arch-dotfile/setup.sh"])
-        elif choice == 4:
             subprocess.run(["src/other/password-policy-analyz.py"])
-        elif choice == 5:
+        elif choice == 2:
             subprocess.run(["src/other/phishing-email.py"])
-        elif choice == 9:
-            print("\n--- Descriptions ---")
-            print("my-kali-dot - installing packages for pentest on Debian/Kali distro.")
-            print("nvim-dot - neovim personal dotfile.")
-            print("pentest-arch - install packages for pentest on Arch-based distro.")
         else:
             print("Invalid choice")
     except ValueError:

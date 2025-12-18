@@ -1,0 +1,5 @@
+pyshark
+geoip2
+aiohttp
+cryptography
+requests

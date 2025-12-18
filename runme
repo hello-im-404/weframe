@@ -3,4 +3,8 @@
 find . -name "*.py" -exec chmod +x {} \;
 find . -name "*.sh" -exec chmod +x {} \;
 
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
 python3 .main.py
