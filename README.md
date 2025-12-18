@@ -24,12 +24,12 @@ chmod 700 runme
 ### Inside:
 ```text
 weframe/
-├── src/cracking/      # Password cracking tools
-├── src/web/          # Web penetration testing  
-├── src/network/      # Network analysis
-├── src/osint/        # Open Source Intelligence
-├── src/dots/         # System configurations
-└── src/other/        # Miscellaneous utilities
+├── src/cracking/      # Password cracking tools.
+├── src/web/          # Web penetration testing.
+├── src/network/      # Network analysis.
+├── src/osint/        # Open Source Intelligence.
+├── src/dots/         # System configurations.
+└── src/other/        # Defense tools.
 ```
 
 ### Links:
