@@ -14,7 +14,7 @@ chmod 700 runme
 
 ### About:
 ```asm
-    * Languages: Python3 / bash / Lua.
+    * Languages: Python3 / bash 
     * This is toolkit, not one tool.
     * Before you begin, make sure all dependencies are installed.
     * Do not forget about ethics.
@@ -27,17 +27,7 @@ weframe/
 ├── src/cracking/      # Password cracking tools.
 ├── src/web/          # Web penetration testing.
 ├── src/network/      # Network analysis.
-├── src/osint/        # Open Source Intelligence.
-├── src/dots/         # System configurations.
 └── src/other/        # Defense tools.
 ```
-
-### Links:
-https://github.com/hello-im-404/osint-helper
-
-https://github.com/hello-im-404/smuggler
-
-and ssh-bruteforce.py sorry i lost link to the author. . .
-
 
 # GoodBye.
