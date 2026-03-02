@@ -12,9 +12,7 @@ def menu():
         print("1 - Web Tools")
         print("2 - Cracking Tools") 
         print("3 - Network Tools")
-        print("4 - OSINT Tools")
-        print("5 - Other Tools")
-        print("6 - Dot files")
+        print("4 - Other Tools")
         print("99 - Exit")
         
         try:
@@ -27,11 +25,7 @@ def menu():
             elif choice == 3:
                 net()
             elif choice == 4:
-                osint()
-            elif choice == 5:
                 other()
-            elif choice == 6:
-                dots()
             elif choice == 99:
                 print("Goodbye!")
                 break
@@ -39,39 +33,6 @@ def menu():
                 print("Invalid input. Please try again.")
         except ValueError:
             print("Please enter a valid number.")
-
-def osint():
-    print("\n=== OSINT Tools ===")
-    print("1 - start-case.sh")
-    
-    try:
-        choice = int(input("\n> "))
-        if choice == 1:
-            subprocess.run(["src/osint/start-case.sh"])
-        else:
-            print("Invalid choice")
-    except ValueError:
-        print("Please enter a valid number")
-
-
-def dots():
-    print("\n=== Dot files===")
-    print("1 - my-kali-dot")
-    print("2 - nvim-dot") 
-    print("3 - pentest-arch")
-
-    try:
-        choice = int(input("\n> "))
-        if choice == 1:
-            subprocess.run(["src/dots/my-kali-dot/install.sh"])
-        elif choice == 2:
-            subprocess.run(["src/dots/nvim-dot/install.sh"])
-        elif choice == 3:
-            subprocess.run(["src/dots/pentest-arch-dotfile/setup.sh"])
-        else:
-            print("Invalid choice")
-    except ValueError:
-        print("Please enter a valid number")
 
 def other():
     print("\n=== Other Tools ===")
